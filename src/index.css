@@ -3,22 +3,17 @@
 @tailwind utilities;
 
 .flip-card {
-    width: 150px;
-    height: 150px;
-    text-align: center;
     perspective: 600px;
 }
 
 .flip-card .content {
     width: 100%;
     height: 100%;
-    transition: transform 0.4s;
     transform-style: preserve-3d;
 }
 
 .flip-card:hover .content {
     transform: rotateY(180deg);
-    transition: transform 0.3s;
 }
 
 .flip-card .front, .flip-card .back {

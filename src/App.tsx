@@ -23,10 +23,10 @@ function App() {
     }, [])
 
     return (
-        <div className="App bg-emerald-600">
-            <h1 className="text-9xl text-bold">Memory Game</h1>
+        <div className="App bg-emerald-600 p-4">
+            <h1 className="text-3xl font-bold mb-2 text-center">Memory Game</h1>
 
-            <div id="stage flex">
+            <div id="stage" className="flex flex-wrap">
                 {matchData.map(({id, front, back}: ICardData) => {
                     return <FlipCard key={id} id={id} front={front} back={back}/>
                 })
