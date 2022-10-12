@@ -17,14 +17,8 @@
 .flip-card .front, .flip-card .back {
     line-height: 150px;
     backface-visibility: hidden;
-    color: #fff;
-    background-color: lightseagreen;
-    border: 6px solid lightcoral;
-    box-shadow: 6px 6px lightseagreen;
 }
 
 .flip-card .back {
     transform: rotateY(180deg);
-    border: 6px solid lightseagreen;
-    box-shadow: 6px 6px lightcoral;
 }

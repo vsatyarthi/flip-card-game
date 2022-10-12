@@ -1,6 +1,6 @@
-export const FlipCard = ({ data, checkIfMatched }: any) => {
+export const FlipCard = ({ data, checkIfMatched, id }: any) => {
   const handleClick = () => {
-    checkIfMatched(data.id, data.front, !data.flipped);
+    checkIfMatched({ ...data, flipped: !data.flipped }, id);
   };
 
   return (
@@ -10,11 +10,11 @@ export const FlipCard = ({ data, checkIfMatched }: any) => {
       }`}
       onClick={handleClick}
     >
-      <div className="content w-full h-full transition-transform duration-500 ">
-        <div className="front absolute w-full h-full">
-          <h1 className="text-9xl">?</h1>
+      <div className="content w-full h-full transition-transform duration-1000">
+        <div className="front absolute w-full h-full justify-center align-middle rounded-3xl rounded bg-indigo-600 text-indigo-100 border-indigo-700 border-4 rounded">
+          <h1 className="text-9xl inline-block">?</h1>
         </div>
-        <div className="back absolute w-full h-full">
+        <div className="back absolute w-full h-full justify-center align-middle rounded-3xl rounded bg-amber-700 text-amber-100 border-amber-700 border-4 rounded">
           <h1 className="text-9xl">{data.front}</h1>
         </div>
       </div>
